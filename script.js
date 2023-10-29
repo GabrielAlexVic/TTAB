@@ -53,22 +53,22 @@ function nextQuestion(e) {
 
 function finish() {
   if(MDQpoints == 0 && HCRpoints <= 1 && SRApoints == 0) {
-    textFinish.innerHTML = `Trata-se de um quadro NÃO SUGESTIVO <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
+    textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">NÃO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
   else if(MDQpoints == 0 && HCRpoints <= 2 && SRApoints == 0) {
-    textFinish.innerHTML = `Trata-se de um quadro POUCO SUGESTIVO <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
+    textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">POUCO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
   else if(MDQpoints == 1 || HCRpoints <= 3) {
-    textFinish.innerHTML = `Trata-se de um quadro SUGESTIVO <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
+    textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
   else if(MDQpoints >= 2 || HCRpoints >= 4) {
-    textFinish.innerHTML = `Trata-se de um quadro MUITO SUGESTIVO <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
+    textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">MUITO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }

@@ -91,3 +91,8 @@ main {
 .finish button {
   text-align: center;
 }
+
+.diagnostico {
+  color: red;
+  font-size: 30px;
+}
