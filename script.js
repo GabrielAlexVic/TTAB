@@ -34,13 +34,10 @@ function nextQuestion(e) {
   if (correct) {
     if (currentIndex <= 3) {
       MDQpoints++;
-      console.log("entrou MDQ");
     } else if (currentIndex >= 4 && currentIndex <= 6) {
       HCRpoints++;
-      console.log("entrou HCR");
     } else if (currentIndex >= 7 && currentIndex <= 13) {
       SRApoints++;
-      console.log("entrou SRA");
     }
   }
   if (currentIndex < questions.length - 1) {
@@ -77,7 +74,6 @@ function finish() {
      content.style.display = "none";
      contentFinish.style.display = "flex";
   }
-  console.log("MDQ: ", MDQpoints," HCR: ", HCRpoints," SRA: ", SRApoints)
 }
 
 function loadQuestion() {
