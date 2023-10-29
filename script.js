@@ -14,19 +14,19 @@ let HCRpoints = 0;
 let SRApoints = 0;
 let points = 0;
 
-btnRestart.onclick = () => {
-  content.style.display = "flex";
-  contentFinish.style.display = "none";
+// btnRestart.onclick = () => {
+//   content.style.display = "flex";
+//   contentFinish.style.display = "none";
 
-  currentIndex = 0;
-  MDQpoints = 0;
-  HCRpoints = 0;
-  SRApoints = 0;
-  points = 0;
+//   currentIndex = 0;
+//   MDQpoints = 0;
+//   HCRpoints = 0;
+//   SRApoints = 0;
+//   points = 0;
 
 
-  loadQuestion();
-};
+//   loadQuestion();
+// };
 
 function nextQuestion(e) {
   const correct = e.target.getAttribute("data-correct") === "true";
@@ -86,7 +86,7 @@ function loadQuestion() {
     const div = document.createElement("div");
 
     div.innerHTML = `
-        <button class="btn btn-primary button answer" data-correct="${answer.correct}">
+        <button style="width: 200px" class="btn btn-primary button answer mx-3" data-correct="${answer.correct}">
           ${answer.option}
         </button>
     `;
