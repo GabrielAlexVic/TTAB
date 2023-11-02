@@ -34,10 +34,10 @@ function nextQuestion(e) {
   if (correct) {
     if (currentIndex <= 3) {
       MDQpoints++;
-    } else if (currentIndex >= 4 && currentIndex <= 6) {
-      HCRpoints++;
-    } else if (currentIndex >= 7 && currentIndex <= 13) {
+    } else if (currentIndex >= 4 && currentIndex <= 10) {
       SRApoints++;
+    } else if (currentIndex >= 11 && currentIndex <= 13) {
+      HCRpoints++;
     }
   }
   if (currentIndex < questions.length - 1) {
