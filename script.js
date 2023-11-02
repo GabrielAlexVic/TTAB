@@ -49,28 +49,28 @@ function nextQuestion(e) {
 }
 
 function finish() {
-  if(MDQpoints == 0 && HCRpoints <= 1 && SRApoints == 0) {
+  if(MDQpoints == 0 && SRApoints <= 1 && HCRpoints == 0) {
     textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">NÃO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
-  else if(MDQpoints == 0 && HCRpoints <= 2 && SRApoints == 0) {
+  else if(MDQpoints == 0 && SRApoints <= 2 && HCRpoints == 0) {
     textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">POUCO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
-  else if(MDQpoints == 1 || HCRpoints <= 3) {
+  else if(MDQpoints == 1 || SRApoints <= 3) {
     textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
-  else if(MDQpoints >= 2 || HCRpoints >= 4) {
+  else if(MDQpoints >= 2 || SRApoints >= 4) {
     textFinish.innerHTML = `Trata-se de um quadro <span class="diagnostico">MUITO SUGESTIVO</span> <br> para Transtorno Afetivo Bipolar.<br>` + "Você marcou " + (MDQpoints+HCRpoints+SRApoints) + " de 14 questões.";
     content.style.display = "none";
     contentFinish.style.display = "flex";
   }
-   else {
-     textFinish.innerHTML = `Nao caiu em nenhuma`;
+  else {
+     textFinish.innerHTML = `<span class="diagnostico">Erro</span>`;
      content.style.display = "none";
      contentFinish.style.display = "flex";
   }

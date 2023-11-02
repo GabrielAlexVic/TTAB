@@ -5,7 +5,7 @@ export default [
       "pensaram que não era o seu eu normal ou você estava tão " +
       "hiperativo que ficou com problemas? " +
       "Você foi muito mais sociável ou extrovertido do que o normal, por " +
-      "exemplo, por exemplo, telefonou para amigos no meio da noite? " +
+      "exemplo, telefonou para amigos no meio da noite? " +
       "(Avaliar sobre autoconfiança e sociabilidade).",
     answers: [
       { option: "Não", correct: false },
